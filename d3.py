@@ -3,12 +3,14 @@
 import time
 import subprocess
 import webbrowser
+import os
 
 option='''
 press 1 for vlc
 press 2 for date and time
 press 3 to search on google
 press 4 to search on youtube
+press 5 to reboot system
 '''
 print(option)
 
@@ -25,6 +27,8 @@ elif choice =='3' :
 elif choice =='4' :
 	video=input("enter here:")
 	webbrowser.open_new_tab('https://www.youtube.com/results?search_query='+video)
+elif choce==5:
+	os.system("sudo reboot -f")
 else:
 	print("error:Invalid option")
 	
